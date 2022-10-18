@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>/home/tim/Schreibtisch/Studium/S3/kNN/kNN2/src</OriginalElement>
+  <nodes>
+    <node x="453.5446313065977" y="489.4864165588616">NeuronalesNetz.WorkingNeuron</node>
+    <node x="-62.778783958602844" y="-186.0">ActivationFunctions.AktionsPotenzial</node>
+    <node x="-845.6507115135835" y="-186.0">ActivationFunctions.Sigmoid</node>
+    <node x="230.10737386804635" y="697.5834411384218">Main</node>
+    <node x="-408.6106080206986" y="-202.28719275549804">ActivationFunctions.Identity</node>
+    <node x="-555.6106080206986" y="567.0">NeuronalesNetz.NeuronalNetwork</node>
+    <node x="643.0" y="-174.0">NeuronalesNetz.Neuron</node>
+    <node x="160.10737386804635" y="65.57956015523934">NeuronalesNetz.Connection</node>
+    <node x="-866.8240620957309" y="376.20439844760676">ActivationFunctions.ActivationFunctions</node>
+    <node x="862.5" y="251.5">NeuronalesNetz.InputNeuron</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="ActivationFunctions.Identity" target="ActivationFunctions.ActivationFunctions" relationship="REALIZATION">
+      <point x="0.0" y="53.5" />
+      <point x="-268.6106080206986" y="-44.0" />
+      <point x="-726.8240620957309" y="-44.0" />
+      <point x="0.0" y="-41.0" />
+    </edge>
+    <edge source="NeuronalesNetz.NeuronalNetwork" target="NeuronalesNetz.InputNeuron" relationship="TO_MANY">
+      <point x="287.0" y="33.08344113842179" />
+      <point x="960.0" y="798.0834411384218" />
+      <point x="0.0" y="41.5" />
+    </edge>
+    <edge source="NeuronalesNetz.WorkingNeuron" target="NeuronalesNetz.Neuron" relationship="GENERALIZATION">
+      <point x="89.0" y="-126.0" />
+      <point x="720.5446313065977" y="38.0" />
+      <point x="743.5" y="38.0" />
+      <point x="33.5" y="41.5" />
+    </edge>
+    <edge source="ActivationFunctions.ActivationFunctions" target="ActivationFunctions.Identity" relationship="TO_ONE">
+      <point x="140.0" y="0.0" />
+      <point x="-283.6106080206986" y="417.20439844760676" />
+      <point x="-15.0" y="53.5" />
+    </edge>
+    <edge source="ActivationFunctions.ActivationFunctions" target="ActivationFunctions.AktionsPotenzial" relationship="TO_ONE">
+      <point x="140.0" y="30.0" />
+      <point x="92.22121604139716" y="447.20439844760676" />
+      <point x="15.0" y="53.5" />
+    </edge>
+    <edge source="NeuronalesNetz.WorkingNeuron" target="ActivationFunctions.ActivationFunctions" relationship="TO_ONE">
+      <point x="-178.0" y="-65.9864165588616" />
+      <point x="-726.8240620957309" y="549.5" />
+      <point x="0.0" y="41.0" />
+    </edge>
+    <edge source="ActivationFunctions.Sigmoid" target="ActivationFunctions.ActivationFunctions" relationship="REALIZATION">
+      <point x="0.0" y="53.5" />
+      <point x="-705.6507115135835" y="-33.0" />
+      <point x="-726.8240620957309" y="-33.0" />
+      <point x="0.0" y="-41.0" />
+    </edge>
+    <edge source="ActivationFunctions.AktionsPotenzial" target="ActivationFunctions.ActivationFunctions" relationship="REALIZATION">
+      <point x="0.0" y="53.5" />
+      <point x="77.22121604139716" y="-44.0" />
+      <point x="-726.8240620957309" y="-44.0" />
+      <point x="0.0" y="-41.0" />
+    </edge>
+    <edge source="NeuronalesNetz.InputNeuron" target="NeuronalesNetz.Neuron" relationship="GENERALIZATION">
+      <point x="0.0" y="-41.5" />
+      <point x="960.0" y="44.0" />
+      <point x="743.5" y="44.0" />
+      <point x="33.5" y="41.5" />
+    </edge>
+    <edge source="ActivationFunctions.ActivationFunctions" target="ActivationFunctions.Sigmoid" relationship="TO_ONE">
+      <point x="-15.0" y="-41.0" />
+      <point x="-36.173350582147464" y="53.5" />
+    </edge>
+    <edge source="NeuronalesNetz.WorkingNeuron" target="NeuronalesNetz.Connection" relationship="TO_MANY">
+      <point x="-178.0" y="0.0" />
+      <point x="283.10737386804635" y="615.4864165588616" />
+      <point x="0.0" y="78.0" />
+    </edge>
+    <edge source="NeuronalesNetz.NeuronalNetwork" target="NeuronalesNetz.WorkingNeuron" relationship="CREATE">
+      <point x="287.0" y="-119.5135834411384" />
+      <point x="-178.0" y="30.0" />
+    </edge>
+    <edge source="NeuronalesNetz.NeuronalNetwork" target="NeuronalesNetz.Connection" relationship="CREATE">
+      <point x="287.0" y="-149.5135834411384" />
+      <point x="268.10737386804635" y="615.4864165588616" />
+      <point x="-15.0" y="78.0" />
+    </edge>
+    <edge source="ActivationFunctions.ActivationFunctions" target="ActivationFunctions.Sigmoid" relationship="CREATE">
+      <point x="-30.0" y="-41.0" />
+      <point x="-51.173350582147464" y="53.5" />
+    </edge>
+    <edge source="ActivationFunctions.ActivationFunctions" target="ActivationFunctions.Identity" relationship="CREATE">
+      <point x="140.0" y="15.0" />
+      <point x="-253.61060802069858" y="432.20439844760676" />
+      <point x="15.0" y="53.5" />
+    </edge>
+    <edge source="NeuronalesNetz.NeuronalNetwork" target="NeuronalesNetz.WorkingNeuron" relationship="TO_MANY">
+      <point x="287.0" y="-134.5135834411384" />
+      <point x="-178.0" y="15.0" />
+    </edge>
+    <edge source="NeuronalesNetz.Connection" target="NeuronalesNetz.Neuron" relationship="TO_ONE">
+      <point x="0.0" y="-78.0" />
+      <point x="283.10737386804635" y="-132.5" />
+      <point x="-67.0" y="0.0" />
+    </edge>
+    <edge source="ActivationFunctions.ActivationFunctions" target="ActivationFunctions.AktionsPotenzial" relationship="CREATE">
+      <point x="-136.32664941785254" y="-41.0" />
+      <point x="-863.1507115135835" y="-219.78719275549804" />
+      <point x="77.22121604139716" y="-219.78719275549804" />
+      <point x="0.0" y="-53.5" />
+    </edge>
+    <edge source="Main" target="NeuronalesNetz.NeuronalNetwork" relationship="CREATE">
+      <point x="-88.0" y="0.0" />
+      <point x="287.0" y="-25.91655886157821" />
+    </edge>
+    <edge source="NeuronalesNetz.NeuronalNetwork" target="NeuronalesNetz.InputNeuron" relationship="CREATE">
+      <point x="15.0" y="198.0" />
+      <point x="-253.61060802069858" y="1010.5" />
+      <point x="975.0" y="1010.5" />
+      <point x="15.0" y="41.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.6047244094488189" showDependencies="true" x="95.5" y="386.0" />
+  <SelectedNodes>
+    <node>NeuronalesNetz.WorkingNeuron</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
