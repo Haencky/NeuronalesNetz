@@ -1,5 +1,7 @@
 import NeuronalesNetz.NeuronalNetwork;
 
+//Das ist ein Test
+
 public class Main {
     public static void main(String[] args) {
         NeuronalNetwork nn = new NeuronalNetwork();
@@ -35,7 +37,7 @@ public class Main {
 
         nn.reset();
 
-        System.out.println(nn.getOutputValues()[0] + -0.03504739174185117);
+        System.out.println(nn.getOutputValues()[0] - 0.03504739174185117);
         System.out.println(nn.getOutputValues()[1] - 0.06379840926271282 );
         System.out.println(nn.getOutputValues()[2] - 0.11976621345436994 );
         System.out.println(nn.getOutputValues()[3] -  0.032371141308330784);
