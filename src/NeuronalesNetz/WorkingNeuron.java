@@ -44,7 +44,7 @@ public class WorkingNeuron extends Neuron{
      */
     @Override
     public double getValue() {
-        if(valueClean == false) {
+        if(!valueClean) {
             double sum = 0;
             for (Connection c : connections) {
                 sum += c.getValue();

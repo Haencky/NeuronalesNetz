@@ -181,8 +181,6 @@ public class NeuronalNetwork {
             }
 
             //verknüpft die Last-Layer mit den OutputNeuronen
-
-            //VERKNÜPFT IMMER ZUERST DEN BIAS, GEWICHT TROTZDEM ALS LETZTES ANGEBEN
             neuronOut = 0;
             List<WorkingNeuron> lastLayer = hiddenNeurons.get(hiddenNeurons.size()-1);
             for(WorkingNeuron o : output) {
@@ -202,7 +200,7 @@ public class NeuronalNetwork {
      * Erzeugt zufällige Gewichte und ruft damit die andere Methode auf
      * @param biases
      */
-    public void connect(int[] biases) {
+    public void connect(int... biases) {
         if(!hiddenNeurons.isEmpty()) {
             List<WorkingNeuron> largest = hiddenNeurons.get(0);
             for (int i = 1; i < hiddenNeurons.size(); i++) {
@@ -213,7 +211,7 @@ public class NeuronalNetwork {
                 }
             }
             Random rand = new Random();
-            double[][] weights = new double[hiddenNeurons.size()][largest.size()+1];
+            double[][] weights = new double[hiddenNeurons.size() * largest.size()* output.size()][largest.size()+ output.size()];
             for (int i = 0; i < weights.length; i++) {
                 for (int j = 0; j < weights[i].length; j++) {
                     weights[i][j] = rand.nextDouble();
@@ -288,6 +286,7 @@ public class NeuronalNetwork {
                         System.out.print(c.getWeight() + "   ");
                     }
                 }
+                System.out.println(" " + '\n');
             }
         }
     }
