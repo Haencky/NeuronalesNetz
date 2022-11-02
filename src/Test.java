@@ -14,9 +14,11 @@ public class Test {
         nn.visualize(true);
 
         int laeufe = 0;
-        while (nn.getOutputValues()[0] < 4 | nn.getOutputValues()[0] > 4.1) {
+        double expect = 10;
+        double toleranz = 0.0000000000001;
+        while (nn.getOutputValues()[0] < expect - toleranz | nn.getOutputValues()[0] > expect + toleranz) {
             nn.reset();
-            nn.learn(0.3,4);
+            nn.learn(0.3,expect);
             laeufe++;
         }
 
