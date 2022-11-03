@@ -27,6 +27,14 @@ public class NeuronalNetwork {
         }
     }
 
+    public void createInput(double[] werte1, double[] werte2, double[] werte3) {
+        for (int i = 0; i < werte1.length; i++) {
+            input.add(new InputNeuron(werte1[i]));
+            input.add(new InputNeuron(werte2[i]));
+            input.add(new InputNeuron(werte3[i]));
+        }
+    }
+
     /**
      * Erzeugt HiddenLayers und fügt diese dem neuronalen Netzwerk hinzu
      * @param fnks, Array für die Aktivierungsfunktionen jedes eigenen Neurons in den Hidden Layern
@@ -268,6 +276,7 @@ public class NeuronalNetwork {
                         System.out.print(c.getWeight() + "   ");
                     }
                 }
+                System.out.println(" " + '\n');
             } else {
                 System.out.println('\n');
 
