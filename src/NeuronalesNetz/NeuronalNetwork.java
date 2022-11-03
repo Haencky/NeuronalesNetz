@@ -22,6 +22,7 @@ public class NeuronalNetwork {
      * @param inputs, Array das am Index i den Wert des iten InputNeurons hat
      */
     public void createInput(double... inputs) {
+        input = new ArrayList<>();
         for (int i = 0; i < inputs.length; i++) {
             input.add(i, new InputNeuron(inputs[i]));
         }
@@ -225,9 +226,9 @@ public class NeuronalNetwork {
                     weights[i][j] = rand.nextDouble();
                 }
             }
-            double[][] weightsToInput = new double[output.size()][input.size()];
+            double[][] weightsToInput = new double[largest.size() + output.size()][input.size()];
             for (int i = 0; i < weightsToInput.length; i++) {
-                for (int j = 0; j < weightsToInput.length; j++) {
+                for (int j = 0; j < weightsToInput[0].length; j++) {
                     weightsToInput[i][j] = rand.nextDouble();
                 }
             }
@@ -236,7 +237,7 @@ public class NeuronalNetwork {
         } else {
             Random rand = new Random();
             double[][] useless = new double[1][1];
-            double[][] weigthsToInput = new double[output.size()][input.size()];
+            double[][] weigthsToInput = new double[output.size()+1][input.size()];
             for (int i = 0; i < weigthsToInput.length; i++) {
                 for(int j = 0; j < weigthsToInput[0].length; j++) {
                     weigthsToInput[i][j] = rand.nextDouble();
@@ -335,5 +336,6 @@ public class NeuronalNetwork {
             }
         }
     }
+
 }
 
